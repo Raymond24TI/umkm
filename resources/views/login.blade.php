@@ -1,7 +1,17 @@
-<x-layout> <form method="POST" action="_{{route('login.attempt')}}">
+<x-layout>
+    <form method="POST" action="{{ route('login.attempt')}}">
     @csrf
-    <input type="email" name="" id="" placeholder="Email"/>
-    <input type="password" name="" id="" placeholder="Password"/>
+    @if ($errors->any())
+    <div>
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{$error}}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+    <input type="email" name="email" id="" placeholder="Email"/>
+    <input type="password" name="password" id="" placeholder="Password"/>
     <button type="submit">Submit</button>
 </form>
 </x-layout>

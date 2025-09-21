@@ -1,3 +1,9 @@
-<div>
-    <!-- Let all your things have their places; let each part of your business have its time. - Benjamin Franklin -->
-</div>
+<x-layout>
+    <form action="{{ route('register.store')}}" method="POST">
+        @csrf
+        <input type="text" name="name" placeholder="name">
+        <input type="email" name="email" placeholder="email">
+        <input type="password" name="password" placeholder="password">
+        <button type="submit">Register</button>
+    </form>
+</x-layout>
