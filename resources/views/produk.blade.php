@@ -48,8 +48,7 @@ $produk = [
         "harga" => "Rp 180.000",
         "gambar" => "https://1.bp.blogspot.com/-HRoBteOUOq0/VlaHjiUGR1I/AAAAAAAAB8Y/xbmPCBtXUMs/s400/lentera%2Bsederhana%2Bdari%2Bkaleng%2Bbekas.jpg"
     ],
-];
-?>
+];?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -88,6 +87,7 @@ $produk = [
     }
     .card:hover {
       transform: translateY(-6px);
+
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
     .card img {
