@@ -54,18 +54,19 @@ $produk = [
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Katalog UMKM Kerajinan Tangan</title>
+  <title>Katalog UMKM Kerajinan Tangan Eksklusif</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f5f0;
+           background: linear-gradient(135deg, #d2b48c, #8b5e3c);
+
     }
     /* Hero dengan background kayu/batik */
     .hero {
       background: url('https://www.toptal.com/designers/subtlepatterns/uploads/wood_pattern.png') center/cover no-repeat;
       position: relative;
-      color: white;
+      color: rgb(255, 228, 207);
       padding: 120px 20px;
     }
     .hero::after {
@@ -106,14 +107,30 @@ $produk = [
     footer {
       background-color: black;
     }
+        .bg-brown{
+        background-color: #523621
+    }
+    .btn-brown{
+        background-color: #fcd5a2;
+        color: #523621;
+    }
+    .btn-brown:hover{
+        transition: 0.5s;
+        background-color: #fff3e4;
+
+    }
   </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-brown shadow-sm sticky-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">UMKM Kerajinan</a>
+    <a class="navbar-brand fw-bold" href="#">Kerajinan Eksklusif</a>
+        <form method="POST" action="{{ route('logout') }}">
+      @csrf
+      <button type="submit" class="btn btn-brown">Logout</button>
+    </form>
   </div>
 </nav>
 
@@ -147,7 +164,7 @@ $produk = [
 </div>
 
 <!-- Footer -->
-<footer class="text-light text-center py-3">
+<footer class="text-light text-center py-3 bg-brown">
   <p class="mb-0">UMKM Kerajinan Tangan | Elegan & Berkualitas</p>
 </footer>
 

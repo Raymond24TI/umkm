@@ -27,6 +27,11 @@ Route::post('register', RegisterController::class)->name('register.store');
 Route::get('/dashboard', [DashboardController::class, 'index'])
      ->middleware('auth')
      ->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])
+    ->middleware('auth')
+    ->name('dashboard');
 
-Route::get('/produk', [ProdukController::class, 'index'])->name('produk.index');
-Route::get('/produk/{id}', [ProdukController::class, 'show'])->name('produk.show');
+Route::get('/produk/{param1}', [ProdukController::class, 'show'])->name('produk.show');
+
+
+

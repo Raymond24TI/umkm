@@ -23,6 +23,8 @@ $produk = [
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
+           background: linear-gradient(135deg, #d2b48c, #8b5e3c);
+
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .produk-img {
@@ -33,14 +35,30 @@ $produk = [
     .info-list li {
         margin-bottom: 10px;
     }
+    .btn-brown{
+        background-color: #fcd5a2;
+        color: #523621;
+    }
+    .btn-brown:hover{
+        transition: 0.5s;
+        background-color: #fff3e4;
+
+    }
+    .bg-brown{
+        background-color: #523621
+    }
   </style>
 </head>
 <body class="bg-light">
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-brown">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="index.php">UMKM Kerajinan</a>
+    <a class="navbar-brand fw-bold" href="index.php">Kerajinan Eksklusif</a>
+        <form method="POST" action="{{ route('logout') }}" >
+      @csrf
+      <button type="submit" class="btn btn-brown">Logout</button>
+    </form>
   </div>
 </nav>
 
@@ -52,9 +70,9 @@ $produk = [
     </div>
     <div class="col-md-6">
       <h2 class="fw-bold"><?= $produk['nama']; ?></h2>
-      <h4 class="text-success fw-bold"><?= $produk['harga']; ?></h4>
+      <h4 class="text-white fw-bold"><?= $produk['harga']; ?></h4>
       <p class="mt-3"><?= $produk['deskripsi']; ?></p>
-      
+
       <ul class="list-group list-group-flush info-list">
         <li class="list-group-item"><strong>Bahan:</strong> <?= $produk['bahan']; ?></li>
         <li class="list-group-item"><strong>Ukuran:</strong> <?= $produk['ukuran']; ?></li>
@@ -65,8 +83,8 @@ $produk = [
       </ul>
 
       <div class="mt-4">
-        <a href="produk" class="btn btn-secondary me-2">Kembali ke Katalog</a>
-        <a href="#" class="btn btn-primary">Beli Sekarang</a>
+        <a href="produk" class="btn btn-brown me-2">Kembali ke Katalog</a>
+        <a href="#" class="btn btn-brown">Beli Sekarang</a>
       </div>
     </div>
   </div>

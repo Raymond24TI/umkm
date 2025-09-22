@@ -1,16 +1,24 @@
-<x-layout>
-    <h1>Welcome {{ Auth::user()->name }} to the Private Dashboard.</h1>
-
-    <div style="margin-top:20px;">
-        <a href="{{ route('produk.index') }}">
-            <button type="button">Produk Kita</button>
+<x-layout-dashboard>
+    <section id="hero">
+        <h1>Selamat datang, {{ Auth::user()->name }}</h1>
+        <h3>di Website UMKM Kerajinan Eksklusif</h3>
+        <a href="{{ route('produk.show', 'produk') }}">
+            <button class="btn">Lihat Produk</button>
         </a>
-    </div>
+    </section>
 
-    <center>
-        <form method="POST" action="{{ route('logout') }}">
-            @csrf
-            <button type="submit">Log out</button>
-        </form>
-    </center>
-</x-layout>
+    <section id="about">
+        <h2>Tentang Kami</h2>
+        <p>
+            UMKM Kerajinan Eksklusif hadir untuk melestarikan seni dan budaya lokal
+            melalui karya tangan berkualitas tinggi.
+            Kami percaya bahwa setiap produk buatan tangan memiliki cerita,
+            dan kami ingin membagikannya kepada dunia.
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Kontak Kami</h2>
+        <p>Email: Kelompok1@gmail.com</p>
+    </section>
+</x-layout-dashboard>
