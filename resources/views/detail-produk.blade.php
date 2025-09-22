@@ -91,7 +91,7 @@ $produk = [
 </div>
 
 <!-- Footer -->
-<footer class="bg-dark text-light text-center py-3">
+<footer class="text-light text-center py-3 bg-brown">
   <p class="mb-0">2025 UMKM Kerajinan Tangan | Batik Tulis Klasik</p>
 </footer>
 
